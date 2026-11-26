@@ -247,6 +247,7 @@ $("showqr").onclick=()=>{ qrMode = pageUrl() ? "link" : "vcf"; drawQR(); $("qrdl
 $("tab-link").onclick=()=>{ qrMode="link"; drawQR(); };
 $("tab-vcf").onclick=()=>{ qrMode="vcf"; drawQR(); };
 $("closeqr").onclick=()=>$("qrdlg").close();
+  if(location.hash!=="#qr") $("showqr").hidden=true;
 $("dlqr").onclick=()=>{
   if(!qrObj) return;
   const n=qrObj.getModuleCount(), m=4, s=Math.floor(1200/(n+2*m));
